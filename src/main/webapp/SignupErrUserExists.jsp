@@ -23,6 +23,9 @@
             <div class="card p-4 mt-3">
                 <div class="text-center">
                     <h2 class="poppins-semibold">Hi, Welcome Back</h2>
+                    <div class="alert alert-danger text-center" role="alert">
+                        <strong>Signup Unsuccessful!</strong> Admin user already exists. Please login.
+                    </div>
                     <h5 class="poppins-light text-muted">Please enter your details</h5>
                 </div>
 
