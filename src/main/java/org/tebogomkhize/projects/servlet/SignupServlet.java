@@ -40,11 +40,11 @@ public class SignupServlet extends HttpServlet {
 
         switch (authStatus) {
             case ADMIN_ALREADY_EXISTS:
-                response.sendRedirect("SignupErrUserExists.jsp");
+                response.sendRedirect("signupErrUserExists.jsp");
                 break;
 
             case SIGNUP_SUCCESS:
-                response.sendRedirect("ProductManagementPage.jsp");
+                response.sendRedirect("productManagementPage.jsp");
         }
     }
 }

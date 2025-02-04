@@ -52,15 +52,15 @@ public class LoginServlet extends HttpServlet {
         switch (authStatus) {
             case INVALID_USERNAME:
             case INVALID_PASSWORD:
-                response.sendRedirect("LoginErrInvalidCredentials.jsp");
+                response.sendRedirect("loginErrInvalidCredentials.jsp");
                 break;
 
             case ADMIN_NOT_CREATED:
-                response.sendRedirect("LoginErrAdminNotPresent.jsp");
+                response.sendRedirect("loginErrAdminNotPresent.jsp");
                 break;
 
             case LOGIN_SUCCESS:
-                response.sendRedirect("ProductManagementPage.jsp");
+                response.sendRedirect("productManagementPage.jsp");
         }
     }
 }

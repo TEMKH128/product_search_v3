@@ -1,13 +1,35 @@
 package org.tebogomkhize.projects.dataaccess.entity;
 
+
 import lombok.Getter;
-import jakarta.persistence.Id;
-import jakarta.persistence.Entity;
+import lombok.Setter;
+import jakarta.persistence.*;
+import lombok.NoArgsConstructor;
+
 
 
 @Entity
-@Getter
+@Table(name = "product")
+@Getter @Setter @NoArgsConstructor
 public class Product {
     @Id
-    private long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+
+    private String size;
+
+    private String title;
+
+    @Lob
+    private byte[] image;
+
+    private int quantity;
+
+
+    public Product(String size, String title, int quantity, byte[] image) {
+        this.size = size;
+        this.title = title;
+        this.image = image;
+        this.quantity = quantity;
+    }
 }

@@ -48,7 +48,8 @@ public class AdminDAO {
 
     private boolean validPasswordProvided(
         Session session, char[] password, String username) {
-        String hql = "SELECT a.password from Admin a WHERE a.username = :username";
+        String hql = "SELECT a.password from Admin a WHERE a.username "
+            + "= :username";
         Query<String> passwordQuery = session.createQuery(hql, String.class);
         passwordQuery.setParameter("username", username);
 
